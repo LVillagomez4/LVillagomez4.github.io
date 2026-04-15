@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis Villagomez | Portfolio</title>
-    <!-- FULL CSS: original + circle overlay -->
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* ...paste the CSS I just showed above... */
-    </style>
 </head>
+
 <body>
     <header>
         <h1>Hi, I'm Luis Villagomez!</h1>
@@ -17,12 +16,14 @@
     </header>
 
     <div class="container">
+
         <div class="links">
             <a href="https://github.com/LVillagomez4" target="_blank">My GitHub Repositories</a>
             <a href="mailto:villagomezla32@gmail.com">Contact Me</a>
-            <a href="LUIS_VILLAGOMEZ_UPDATES_RESUME2026.pdf" target="_blank">View My Resume</a>
+            <a href="LuisResume.pdf" target="_blank">View My Resume</a>
         </div>
 
+        <!-- ABOUT ME -->
         <div class="about-me">
             <h2>About Me</h2>
             <p>
@@ -31,6 +32,38 @@
                 I’m looking forward to gaining hands-on experience and creating meaningful solutions in the tech world.
             </p>
         </div>
+
+        <!-- SEPARATE PROJECT BOX -->
+        <div class="project-box">
+            <h2>Featured Project</h2>
+
+            <h3>Micro Track: Budgetting App</h3>
+
+            <p>
+                This is a full-stack web application that allows users to track product prices from online stores. 
+                Users can set a target price, and when the product drops below that value, they receive an email alert. 
+                The system supports both automated price updates through web scraping and manual database updates.
+            </p>
+
+            <p><strong>Tech Stack:</strong></p>
+            <ul>
+                <li>Frontend: HTML, CSS, JavaScript</li>
+                <li>Backend: Node.js (Express)</li>
+                <li>Database: MySQL</li>
+                <li>Other: Web scraping + Email notifications (Nodemailer)</li>
+            </ul>
+
+            <p>
+                <strong>Live App:</strong>
+                <a href="https://microtrack-44c71.web.app" target="_blank">View Project</a>
+            </p>
+
+            <p>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/LVillagomez4" target="_blank">View Code</a>
+            </p>
+        </div>
+
     </div>
 
     <footer>
@@ -47,19 +80,19 @@
         
         links.forEach(link => {
             link.addEventListener('click', (e) => {
-                e.preventDefault(); // stop immediate navigation
-        
+                e.preventDefault();
+
                 const rect = link.getBoundingClientRect();
                 const x = rect.left + rect.width / 2;
                 const y = rect.top + rect.height / 2;
-        
+
                 overlay.style.left = x + 'px';
                 overlay.style.top = y + 'px';
-        
+
                 const maxDim = Math.max(window.innerWidth, window.innerHeight) * 2;
                 overlay.style.width = maxDim + 'px';
                 overlay.style.height = maxDim + 'px';
-        
+
                 setTimeout(() => {
                     const url = link.href;
                     if (link.target === "_blank") {
