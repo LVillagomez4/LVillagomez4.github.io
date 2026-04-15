@@ -1,3 +1,4 @@
+    /* --- Original CSS --- */
     body {
         background-color: #b8d8b8; /* soft matcha green */
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -93,6 +94,7 @@
         .about-me p { font-size: 1rem; }
     }
 
+    /* --- New CSS for circle overlay --- */
     #circle-overlay {
         position: fixed;
         top: 0;
@@ -106,3 +108,51 @@
         z-index: 9999;
         transition: width 0.6s ease, height 0.6s ease;
     }
+
+   /* --- Project Box Styling --- */
+.project-box {
+    background-color: #eaf6ea;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
+}
+
+.project-box h2 {
+    font-size: 2rem;
+    color: #2b4f2b;
+    margin-bottom: 15px;
+}
+
+.project-box h3 {
+    font-size: 1.4rem;
+    color: #1c3d1c;
+    margin-top: 10px;
+}
+
+.project-box p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #1c2f1c;
+}
+
+.project-box ul {
+    text-align: left;
+    margin: 15px auto;
+    max-width: 500px;
+}
+
+.project-box li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.project-box a {
+    color: #2b4f2b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-box a:hover {
+    text-decoration: underline;
+}
